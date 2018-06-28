@@ -1,22 +1,23 @@
 package main
 
 import (
-"fmt"
-"bufio"
-"os"
+    "bufio"
+    "fmt"
+    "os"
+    "strings"
 )
 
 func main() {
-    //reading an integer
-    var age int
-    fmt.Println("What is your age?")
-    _, err:= fmt.Scan(&age)
+    reader := bufio.NewReader(os.Stdin)   // first method
+    fmt.Println("Simple Shell")
+    fmt.Println("---------------")
+    text,_ := reader.ReadString('\n')
+    fmt.Println(text)
 
-    //reading a string
-    reader := bufio.newReader(os.Stdin)
-    var name string
-    fmt.Println("What is your name?")
-    name, _ := reader.readString("\n")
+    text = strings.Replace(text, "\n", "", -1)
 
-    fmt.Println("Your name is ", &name, " and you are age ", &age)
+    if strings.Compare("hi", text) == 0 {
+	    fmt.Println("hello, Yourself")
+    }
 }
+
