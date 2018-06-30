@@ -11,4 +11,5 @@ func main() {
 	for scanner.Scan(){
 		fmt.Println(scanner.Text())
 	}
+//	fmt.Println(scanner.Scan()) // scanner.Scan().Text() -> error
 }
