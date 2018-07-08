@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// map is similar to dictionary in python
 func main() {
 	m := make(map[string]int)
 
