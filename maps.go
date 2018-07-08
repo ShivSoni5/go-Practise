@@ -24,4 +24,7 @@ func main() {
 
 	n := map[string]int{"foo":1, "bar":2}
 	fmt.Println("map:", n)
+
+	k := map[int]string{1:"foo", 2:"bar"}
+	fmt.Println("map_inverse:", k)
 }
